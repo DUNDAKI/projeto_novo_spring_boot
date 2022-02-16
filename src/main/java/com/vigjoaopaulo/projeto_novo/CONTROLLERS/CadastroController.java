@@ -56,7 +56,7 @@ public class CadastroController {
 
 		if (verificarPorId(id) != true) {
 			return "Registro não encontrado...";
-		} else {
+	 	} else {
 
 			Cadastro p = repository.findById(id).get();
 

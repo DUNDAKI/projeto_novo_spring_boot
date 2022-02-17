@@ -52,7 +52,7 @@ public class AnuncioController {
 	}
 	
 
-	@PostMapping("/inserir")
+	@PostMapping("/add")
 	@ResponseStatus(HttpStatus.CREATED)
 	public String addPerfil(@RequestBody Anuncios anuncio) {
 
@@ -104,6 +104,7 @@ public class AnuncioController {
 			newObj.setNumero(anuncio.getNumero());
 			newObj.setCidade(anuncio.getCidade());
 			newObj.setEstado(anuncio.getEstado());
+			newObj.setNota(anuncio.getNota());
 			repository.save(newObj);
 			return "Deletado com sucesso id: " + id;
 		}
